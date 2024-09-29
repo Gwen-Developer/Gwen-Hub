@@ -32,7 +32,7 @@ function MaterialAPI:ListMaterial(IdPlace)
 	end
 	return List
 end
-function MaterialAPI:CheckMaterialMob(IdPlace,Mob)
-	return MaterialList[IdPlace][Mob]
+function MaterialAPI:CheckMaterialMob(IdPlace,Material)
+	return MaterialList[IdPlace][Material]
 end
 return MaterialAPI
