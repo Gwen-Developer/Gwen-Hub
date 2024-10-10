@@ -52,7 +52,7 @@ spawn(function()
 		pcall(function()
 			if _G.UseFAttack and Player.Character.Stun.Value == 0 then
 				AttackNoCD()
-				task.wait(_G.FastAttackDelay)
+				task.wait(_G.Settings.Configs["Fast Attack Delay"])
 			end
 		end)
 	end
