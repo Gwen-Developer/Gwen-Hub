@@ -3,7 +3,7 @@ local Shop = {
         {"Geppo ($10K)", {"BuyHaki", "Geppo"}},
         {"Buso ($25K)", {"BuyHaki", "Buso"}},
         {"Soru ($100K)", {"BuyHaki", "Soru"}},
-        {"Observation Haki ($750K)", {"Kentalk", "Buy"}}
+        {"Observation Haki ($750K)", {"KenTalk", "Buy"}}
     },
     ["Shop Melees"] = {
         {"Black Leg ($150K)", {"BuyBlackLeg"}},
