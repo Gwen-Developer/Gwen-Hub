@@ -22,3 +22,17 @@ spawn(function()
 		return old(...)
 	end)
 end)
+spawn(function() 
+    local old 
+    old = hookmetamethod(game, "__namecall", function(self, ...)
+        local args = {...}
+        if getnamecallmethod() == "FireServer" and tostring(self) == "RE/ShootGunEvent" then
+            pcall(function() 
+				args[1] = zxczxczxcz[1].Position
+				args[2] = zxczxczxcz
+				return old(self, unpack(args))
+			end)
+        end
+        return old(self, ...) 
+    end)
+end)
