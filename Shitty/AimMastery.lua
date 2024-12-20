@@ -28,7 +28,6 @@ spawn(function()
         local args = {...}
         if getnamecallmethod() == "FireServer" and tostring(self) == "RE/ShootGunEvent" then
             pcall(function() 
-				qweqweqwe()
 				args[1] = zxczxczxcz[1].Position
 				args[2] = zxczxczxcz
 				return old(self, unpack(args))
