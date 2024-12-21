@@ -15,7 +15,7 @@ local Shop = {
         {"Death Step ($2.5M) + (ƒ5,000)", {"BuyDeathStep"}},
         {"Electric Claw ($3M) + (ƒ5,000)", {"BuyElectricClaw"}},
         {"Dragon Talon ($3M) + (ƒ5,000)", {"BuyDragonTalon"}},
-        {"God Human ($3M)", {"BuyGodhuman"}}
+        {"God Human ($5M) + (ƒ5,000)", {"BuyGodhuman"}}
     },
     ["Shop Swords"] = {
         {"Katana ($1K)", {"BuyItem", "Katana"}},
