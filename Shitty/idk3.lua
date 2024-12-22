@@ -1659,21 +1659,4 @@ function Library:Window()
 	end
 	return tabs
 end
-local ScreenGui3 = Instance.new("ScreenGui")
-ScreenGui3.Name = "ScreenGui"
-ScreenGui3.Parent = game.CoreGui
-local OpenButton = Instance.new("TextButton")
-OpenButton.Name = "Toggle"
-OpenButton.Parent = ScreenGui3
-OpenButton.BackgroundColor3 = Color3.fromRGB(256, 256, 256)
-OpenButton.Position = UDim2.new(0, 15, 0.0952890813, 0)
-OpenButton.Size = UDim2.new(0, 25, 0, 25)
-OpenButton.Font = Enum.Font.Code
-OpenButton.Text = ""
-OpenButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-OpenButton.TextScaled = true
-OpenButton.MouseButton1Down:connect(function()
-	game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-	game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-end)
 return Library
