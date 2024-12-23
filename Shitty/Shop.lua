@@ -34,6 +34,7 @@ local Shop = {
         {"Flintlock ($10.5K)", {"BuyItem", "Flintlock"}},
         {"Refined Slingshot ($30K)", {"BuyItem", "Refined Slingshot"}},
         {"Refined Flintlock ($65K)", {"BuyItem", "Refined Flintlock"}},
+        {"Dual Flintlock ($65K)", {"BuyItem", "Dual Flintlock"}},
         {"Cannon ($100K)", {"BuyItem", "Cannon"}}
     },
     ["Shop Accessories"] = {
