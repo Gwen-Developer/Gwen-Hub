@@ -976,7 +976,7 @@ function Library:CreateWindow(info)
 	CloseUI.BorderColor3 = Color3.fromRGB(0,0,0)
 	CloseUI.BorderSizePixel = 0
 	CloseUI.Position = UDim2.new(0.0909999982, 0,0.186000004, 0)
-	CloseUI.Size = UDim2.new(0, 70,0, 30)
+	CloseUI.Size = UDim2.new(0, 45,0, 45)
 	CloseUI.Font = Enum.Font.Gotham
 	CloseUI.Text = ""
 	CloseUI.TextColor3 = Color3.fromRGB(255,255,255)
@@ -1007,38 +1007,6 @@ function Library:CreateWindow(info)
 	BackgroundGradient_1.Parent = CloseUI
 	BackgroundGradient_1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(13, 13, 13)), ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 255))}
 	BackgroundGradient_1.Rotation = -100
-	
-	FPSText.Name = "FPSText"
-	FPSText.Parent = CloseUI
-	FPSText.AnchorPoint = Vector2.new(0.5, 0.5)
-	FPSText.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	FPSText.BackgroundTransparency = 1
-	FPSText.BorderColor3 = Color3.fromRGB(0,0,0)
-	FPSText.BorderSizePixel = 0
-	FPSText.Position = UDim2.new(0.5, 0,0.5, 0)
-	FPSText.Size = UDim2.new(0.800000012, 0,1, 0)
-	FPSText.Font = Enum.Font.Gotham
-	FPSText.Text = "FPS : 60"
-	FPSText.TextColor3 = Color3.fromRGB(255,255,255)
-	FPSText.TextSize = 10
-	FPSText.TextXAlignment = Enum.TextXAlignment.Left
-	FPSText.TextTransparency = 1
-
-	ServerTimeText.Name = "ServerTimeText"
-	ServerTimeText.Parent = CloseUI
-	ServerTimeText.AnchorPoint = Vector2.new(0.5, 0.5)
-	ServerTimeText.BackgroundColor3 = Color3.fromRGB(255,255,255)
-	ServerTimeText.BackgroundTransparency = 1
-	ServerTimeText.BorderColor3 = Color3.fromRGB(0,0,0)
-	ServerTimeText.BorderSizePixel = 0
-	ServerTimeText.Position = UDim2.new(0.5, 0,0.5, 0)
-	ServerTimeText.Size = UDim2.new(0.800000012, 0,1, 0)
-	ServerTimeText.Font = Enum.Font.Gotham
-	ServerTimeText.Text = "00:00:00"
-	ServerTimeText.TextColor3 = Color3.fromRGB(255,255,255)
-	ServerTimeText.TextSize = 10
-	ServerTimeText.TextXAlignment = Enum.TextXAlignment.Right
-	ServerTimeText.TextTransparency = 1
 	
 	lak(CloseUI)
 	
@@ -1079,41 +1047,12 @@ function Library:CreateWindow(info)
 	CloseUI.MouseButton1Click:Connect(function()
 		isopen = not isopen
 		if isopen then
-			oripos = CloseUI.Position
 			Tw({
 				v = Background_1,
 				t = 0.15,
 				s = "Linear",
 				d = "Out",
 				g = {Size = UDim2.new(0, 0,0, 0)}
-			}):Play()
-			Tw({
-				v = CloseUI,
-				t = 0.15,
-				s = "Back",
-				d = "In",
-				g = {Position = UDim2.new(.5, 0,.1, 0)}
-			}):Play()
-			Tw({
-				v = FPSText,
-				t = 0.3,
-				s = "Linear",
-				d = "Out",
-				g = {TextTransparency = 0}
-			}):Play()
-			Tw({
-				v = ServerTimeText,
-				t = 0.3,
-				s = "Linear",
-				d = "Out",
-				g = {TextTransparency = 0}
-			}):Play()
-			Tw({
-				v = CloseUI,
-				t = 0.3,
-				s = "Back",
-				d = "Out",
-				g = {Size = UDim2.new(0, 200,0, 30)}
 			}):Play()
 		else
 			Tw({
@@ -1123,58 +1062,6 @@ function Library:CreateWindow(info)
 				d = "Out",
 				g = {Size = UDim2.new(0, 400,0, 300)}
 			}):Play()
-			Tw({
-				v = CloseUI,
-				t = 0.15,
-				s = "Linear",
-				d = "Out",
-				g = {Position = oripos}
-			}):Play()
-			Tw({
-				v = FPSText,
-				t = 0.3,
-				s = "Linear",
-				d = "Out",
-				g = {TextTransparency = 1}
-			}):Play()
-			Tw({
-				v = ServerTimeText,
-				t = 0.3,
-				s = "Linear",
-				d = "Out",
-				g = {TextTransparency = 1}
-			}):Play()
-			Tw({
-				v = CloseUI,
-				t = 0.3,
-				s = "Back",
-				d = "Out",
-				g = {Size = UDim2.new(0, 70,0, 30)}
-			}):Play()
-		end
-	end)
-	
-	local fps = 0
-	local lastTime = tick()
-
-	game:GetService("RunService").RenderStepped:Connect(function()
-		local currentTime = tick()
-		local deltaTime = currentTime - lastTime
-		lastTime = currentTime
-		fps = 1 / deltaTime
-	end)
-	
-	spawn(function()
-		while wait(1) do
-			pcall(function()
-				local scripttime = game.Workspace.DistributedGameTime
-				local seconds = scripttime%60
-				local minutes = math.floor(scripttime/60%60)
-				local hours = math.floor(scripttime/3600)
-				local tempo = string.format("%02d:%02d:%02d", hours ,minutes, seconds)
-				ServerTimeText.Text = tostring(tempo)
-				FPSText.Text = "FPS : "..string.format("%.0f", fps)
-			end)
 		end
 	end)
 	
@@ -2567,6 +2454,20 @@ function Library:CreateWindow(info)
 					Title_10.Text = b
 				end
 				return NewText
+			end
+			
+			function Library.Main:CreateLine()
+
+				local Line = Instance.new("Frame")
+
+				Line.Name = "Gwen"
+				Line.Parent = Section_1
+				Line.BackgroundColor3 = Color3.fromRGB(254, 41, 76)
+				Line.BackgroundTransparency = 0.5
+				Line.BorderColor3 = Color3.fromRGB(0,0,0)
+				Line.BorderSizePixel = 0
+				Line.LayoutOrder = 2
+				Line.Size = UDim2.new(0.899999976, 0,0, 1.5)
 			end
 			
 			function Library.Main:CreateTextBox(info)
