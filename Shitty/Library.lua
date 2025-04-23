@@ -2274,11 +2274,17 @@ function Library:CreateWindow(info)
 						end
 					end)
 					
-				end
+				end 
 				
-				for i,v in ipairs(List) do
-					itemslist:AddList(v, i)
-				end
+				if List[1] then
+					for i,v in ipairs(List) do
+						itemslist:AddList(v, i)
+					end
+				else
+					for i,v in pairs(List) do
+						itemslist:AddList(v, i)
+					end
+				end 
 
 				UIListLayout_10:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
 					ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 0, UIListLayout_10.AbsoluteContentSize.Y + 5)
