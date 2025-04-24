@@ -2023,7 +2023,7 @@ function Library:CreateWindow(info)
 
 				function itemslist:Clear()
 					for _, child in ipairs(ScrollingFrame_2:GetChildren()) do
-						if child:IsA("Frame") then
+						if child:IsA("TextButton") then
 							child:Destroy()
 						end
 					end
