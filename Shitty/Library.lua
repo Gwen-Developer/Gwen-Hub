@@ -1077,7 +1077,7 @@ function Library:CreateWindow(info)
 	Tablist_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Tablist_1.BorderSizePixel = 0
 	Tablist_1.Position = UDim2.new(0.970000029, 0,0.0799999982, 0)
-	Tablist_1.Size = UDim2.new(0, 232,0, 45)
+	Tablist_1.Size = UDim2.new(0, 222,0, 45)
 
 	ScrollingFrame_1.Name = "ScrollingFrame"
 	ScrollingFrame_1.Parent = Tablist_1
