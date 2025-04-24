@@ -1095,9 +1095,9 @@ function Library:CreateWindow(info)
 	ScrollingFrame_1.ElasticBehavior = Enum.ElasticBehavior.WhenScrollable
 	ScrollingFrame_1.HorizontalScrollBarInset = Enum.ScrollBarInset.None
 	ScrollingFrame_1.MidImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
-	ScrollingFrame_1.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
-	ScrollingFrame_1.ScrollBarImageTransparency = 0
-	ScrollingFrame_1.ScrollBarThickness = 0
+	ScrollingFrame_1.ScrollBarImageColor3 = Color3.fromRGB(255,255,255)
+	ScrollingFrame_1.ScrollBarImageTransparency = 0.5
+	ScrollingFrame_1.ScrollBarThickness = 1
 	ScrollingFrame_1.ScrollingDirection = Enum.ScrollingDirection.XY
 	ScrollingFrame_1.TopImage = "rbxasset://textures/ui/Scroll/scroll-top.png"
 	ScrollingFrame_1.VerticalScrollBarInset = Enum.ScrollBarInset.None
