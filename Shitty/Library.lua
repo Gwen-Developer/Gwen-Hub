@@ -946,7 +946,7 @@ function Library:CreateWindow(info)
 	Day_1.Position = UDim2.new(0.248750001, 0,0.12, 0)
 	Day_1.Size = UDim2.new(0, 63,0, 30)
 	Day_1.FontFace = Font.new("rbxassetid://16658237174", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-	Day_1.Text = os.date("%A, %B %d, %Y")
+	Day_1.Text = os.date("%A, %x")
 	Day_1.TextColor3 = Color3.fromRGB(255,255,255)
 	Day_1.TextSize = 10
 	Day_1.TextTransparency = 0.5
@@ -1077,7 +1077,7 @@ function Library:CreateWindow(info)
 	Tablist_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Tablist_1.BorderSizePixel = 0
 	Tablist_1.Position = UDim2.new(0.970000029, 0,0.0799999982, 0)
-	Tablist_1.Size = UDim2.new(0, 182,0, 45)
+	Tablist_1.Size = UDim2.new(0, 232,0, 45)
 
 	ScrollingFrame_1.Name = "ScrollingFrame"
 	ScrollingFrame_1.Parent = Tablist_1
