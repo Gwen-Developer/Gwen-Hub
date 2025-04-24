@@ -2165,11 +2165,11 @@ function Library:CreateWindow(info)
 				
 				if List[1] then
 					for i,v in ipairs(List) do
-						itemslist:AddList(v, i)
+						itemslist:AddList(v)
 					end
 				else
 					for i,v in pairs(List) do
-						itemslist:AddList(v, i)
+						itemslist:AddList(i)
 					end
 				end 
 
