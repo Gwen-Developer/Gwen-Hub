@@ -48,9 +48,9 @@ local Shop = {
         {"Refund Stats (ƒ2,500)", {"BlackbeardReward", "Refund", "2"}}
     },
     ["Shop Ectoplasm"] = {
-        {"Bizarre Rifle (𝑒25)", {"Ectoplasm", "Buy", 1}},
-        {"Ghoul Mask (𝑒50)", {"Ectoplasm", "Buy", 2}},
-        {"Midnight Blade (𝑒100)", {"Ectoplasm", "Buy", 3}}
+        {"Bizarre Rifle (€25)", {"Ectoplasm", "Buy", 1}},
+        {"Ghoul Mask (€50)", {"Ectoplasm", "Buy", 2}},
+        {"Midnight Blade (€100)", {"Ectoplasm", "Buy", 3}}
     }
 }
 return Shop
