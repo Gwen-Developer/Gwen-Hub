@@ -2078,7 +2078,7 @@ function Library:CreateWindow(info)
 								table.insert(selectedList, i)
 							end
 							TextLabel_1.Text = table.concat(selectedList, ", ")
-							Callback(TextLabel_1.Text)
+							Callback(selectedList)
 						else
 							for i,v in pairs(ScrollingFrame_2:GetChildren()) do
 								if v:IsA("TextButton") then
@@ -2142,7 +2142,7 @@ function Library:CreateWindow(info)
 									table.insert(selectedList, i)
 								end
 								TextLabel_1.Text = table.concat(selectedList, ", ")
-								Callback(TextLabel_1.Text)
+								Callback(selectedList)
 							end
 						else
 							if text == Value then
